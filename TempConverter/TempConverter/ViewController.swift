@@ -8,12 +8,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var celsiusDegreeLabel: UILabel!
+    @IBOutlet weak var fahrenheitDegreeLabel: UILabel!
+    @IBOutlet weak var temperature: UISlider! {
+        didSet {
+            temperature.maximumValue = 100
+            temperature.minimumValue = -100
+            temperature.value = 0
+        }
     }
-
-
+    
+    
+    
+    @IBAction func temperatureChanged(_ sender: UISlider) {
+        let temperatureCelsius = Int(round(sender.value))
+        celsiusDegreeLabel.text = "\(temperatureCelsius)ºC"
+        let temperatureFahrenheit = Int(round((sender.value * 9 / 5) + 32))
+        fahrenheitDegreeLabel.text = "\(temperatureFahrenheit)ºF"
+    }
+    
 }
 
