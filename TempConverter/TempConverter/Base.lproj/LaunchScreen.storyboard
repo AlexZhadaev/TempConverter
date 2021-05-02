@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,15 +13,80 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dayBackground" translatesAutoresizingMaskIntoConstraints="NO" id="gaK-G4-xgX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gaK-G4-xgX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="14X-vN-Z43"/>
+                            <constraint firstAttribute="bottom" secondItem="gaK-G4-xgX" secondAttribute="bottom" id="1HG-W7-qpH"/>
+                            <constraint firstItem="gaK-G4-xgX" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Ajf-OC-gSe"/>
+                            <constraint firstItem="gaK-G4-xgX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AoV-zM-XzU"/>
+                            <constraint firstAttribute="bottom" secondItem="gaK-G4-xgX" secondAttribute="bottom" id="TsQ-Na-mp8"/>
+                            <constraint firstAttribute="trailing" secondItem="gaK-G4-xgX" secondAttribute="trailing" id="eWb-H8-AFm"/>
+                            <constraint firstItem="gaK-G4-xgX" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="kXp-SN-632"/>
+                            <constraint firstItem="gaK-G4-xgX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mRc-NC-f8F"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="14X-vN-Z43"/>
+                                <exclude reference="1HG-W7-qpH"/>
+                                <exclude reference="Ajf-OC-gSe"/>
+                                <exclude reference="AoV-zM-XzU"/>
+                                <exclude reference="TsQ-Na-mp8"/>
+                                <exclude reference="eWb-H8-AFm"/>
+                                <exclude reference="kXp-SN-632"/>
+                                <exclude reference="mRc-NC-f8F"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="14X-vN-Z43"/>
+                                <include reference="1HG-W7-qpH"/>
+                                <include reference="Ajf-OC-gSe"/>
+                                <include reference="eWb-H8-AFm"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="14X-vN-Z43"/>
+                                <include reference="1HG-W7-qpH"/>
+                                <include reference="Ajf-OC-gSe"/>
+                                <include reference="eWb-H8-AFm"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="AoV-zM-XzU"/>
+                                <include reference="TsQ-Na-mp8"/>
+                                <include reference="kXp-SN-632"/>
+                                <include reference="mRc-NC-f8F"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="14X-vN-Z43"/>
+                                <include reference="1HG-W7-qpH"/>
+                                <include reference="Ajf-OC-gSe"/>
+                                <include reference="eWb-H8-AFm"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="51.5625" y="373.91304347826087"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dayBackground" width="375" height="667"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
